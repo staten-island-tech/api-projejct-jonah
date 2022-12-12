@@ -1,0 +1,18 @@
+html{
+    background-color: #f8f6f4;
+    color: #f11819;
+    border: 10px ridge #5c1225;
+    text-align: center;
+}
+.card{
+    border: 10px ridge #5c1225;
+    width: 3in;
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.special{
+    color: #f8b72f;
+    text-decoration: none;
+}
