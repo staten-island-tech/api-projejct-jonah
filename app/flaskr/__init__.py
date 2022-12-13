@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, render_template
-
+from .tempdata import data
 
 def create_app(test_config=None):
     # create and configure the app
@@ -27,5 +27,5 @@ def create_app(test_config=None):
 
     @app.route("/")
     def home():
-        return render_template('home.html')
+        return render_template('home.html',data=data)
     return app
