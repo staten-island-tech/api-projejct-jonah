@@ -6,11 +6,12 @@ html{
 }
 .card{
     border: 10px ridge #5c1225;
-    width: 3in;
+    width: 4in;
 }
 .cards{
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .special{
     color: #f8b72f;

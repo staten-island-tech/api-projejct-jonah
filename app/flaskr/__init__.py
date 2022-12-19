@@ -24,8 +24,9 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-
+    from .test import request
     @app.route("/")
     def home():
-        return render_template('home.html',data=data)
+        data1=request()
+        return render_template('home.html',data=data1["data"]["results"])
     return app

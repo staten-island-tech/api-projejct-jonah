@@ -4,12 +4,9 @@
   </head>
   <body>
     <div class="cards">
-    {% for datum in data %}
-    <div class="card">
-    <h1>{{datum.1}}</h1>
-    <p>{{datum.3}}</p>  
-    </div>
-    {% endfor %}
+      {% for character in data %}
+      <div class="card">{{character}}</div>
+      {% endfor %}
     </div>
   </body>
 </html>
