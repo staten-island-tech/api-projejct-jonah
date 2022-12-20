@@ -27,6 +27,9 @@ def create_app(test_config=None):
     from .test import request
     @app.route("/")
     def home():
+        return render_template('home.html') 
+    @app.route("/characters")
+    def characters():
         data1=request()
-        return render_template('home.html',data=data1["data"]["results"])
+        return render_template('characters.html',data=data1["data"]["results"])
     return app

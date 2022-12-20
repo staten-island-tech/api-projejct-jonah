@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+  <body>
+    <div class="cards">
+      {% for character in data %}
+      <div class="card">
+        <h2>{{character.name}}</h2>
+        <img href="{{character.thumbnail}}" alt="{{character.name}}">
+        <ul>
+          {% for comics in character.comics %}
+            {% if comics == "items" %}
+              {% for issues in comics %}
+              <li>{{issues}}</li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
