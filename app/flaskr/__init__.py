@@ -30,6 +30,7 @@ def create_app(test_config=None):
         return render_template('home.html') 
     @app.route("/characters")
     def characters():
-        data1=request()
+        param="/characters"
+        data1=request(param)
         return render_template('characters.html',data=data1["data"]["results"])
     return app
