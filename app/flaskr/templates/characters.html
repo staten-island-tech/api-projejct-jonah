@@ -9,12 +9,8 @@
         <h2>{{character.name}}</h2>
         <img href="{{character.thumbnail}}" alt="{{character.name}}">
         <ul>
-          {% for comics in character.comics %}
-            {% if comics == "items" %}
-              {% for issues in comics %}
-              <li>{{issues}}</li>
-              {% endfor %}
-            {% endif %}
+          {% for comics in character.comics."items" %}
+          <li>{{comics}}</li>
           {% endfor %}
         </ul>
       </div>
