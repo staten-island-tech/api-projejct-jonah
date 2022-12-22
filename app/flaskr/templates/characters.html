@@ -8,9 +8,17 @@
       <div class="card">
         <h2>{{character.name}}</h2>
         <img href="{{character.thumbnail}}" alt="{{character.name}}">
+        <h3>Appearances</h3>
+        <h4>Comics</h4>
         <ul>
-          {% for comics in character.comics."items" %}
-          <li>{{comics}}</li>
+          {% for x in character.comics['items'] %}
+          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          {% endfor %}
+        </ul>
+        <h4>Serieses</h4>
+        <ul>
+          {% for x in character.series['items'] %}
+          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
           {% endfor %}
         </ul>
       </div>
