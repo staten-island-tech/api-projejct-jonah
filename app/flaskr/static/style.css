@@ -7,6 +7,14 @@ html{
 .card{
     border: 10px ridge #5c1225;
     width: 4in;
+    height: 5in;
+    overflow: hidden;
+}
+.card{
+    border: 10px ridge #5c1225;
+    width: 4in;
+    height: 5in;
+    overflow: hidden;
 }
 .cards{
     display: flex;
