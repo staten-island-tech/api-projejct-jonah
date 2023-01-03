@@ -33,4 +33,14 @@ def create_app(test_config=None):
         param="/characters"
         data1=request(param)
         return render_template('characters.html',data=data1["data"]["results"])
+    @app.route("/creators")
+    def creators():
+        param="/creators"
+        data1=request(param)
+        return render_template('creators.html',data=data1["data"]["results"])
+    @app.route("/comics")
+    def comics():
+        param="/comics"
+        data1=request(param)
+        return render_template('comics.html',data=data1["data"]["results"])
     return app
