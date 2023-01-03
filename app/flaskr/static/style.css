@@ -10,11 +10,10 @@ html{
     height: 5in;
     overflow: hidden;
 }
-.card{
+.card:hover {
     border: 10px ridge #5c1225;
     width: 4in;
-    height: 5in;
-    overflow: hidden;
+    height: unset;
 }
 .cards{
     display: flex;
