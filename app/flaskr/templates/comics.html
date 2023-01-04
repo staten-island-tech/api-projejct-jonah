@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+  <body>
+    <div class="cards">
+      {% for comic in data %}
+      <div class="card">
+        <h2>{{comic.title}}</h2>
+        <h3>Description</h3>
+        <p>{{comic.textObjects[0]}}</p>
+        
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
