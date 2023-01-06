@@ -1,7 +1,7 @@
+
 import os
 
-from flask import Flask, render_template
-from .tempdata import data
+from flask import Flask, render_template, request
 
 def create_app(test_config=None):
     # create and configure the app
@@ -43,11 +43,13 @@ def create_app(test_config=None):
         param="/comics"
         data1=request(param)
         return render_template('comics.html',data=data1["data"]["results"])
-    @app.route("/comic/<path:Id>")
-    def comic(Id):
-        #Id=43257
-        param="/comics/"+Id
-        data1=request(param)
-        print(data1)
-        return render_template('comic.html',data=data1["data"]["results"])
+    @app.route("/comic", methods=('GET', 'POST'))
+    def comic():
+        if request.method == "GET":
+            return render_template("ask.html")
+        else:
+            param1=375
+            param="/comics/"+param1
+            data1=request(param)
+            return render_template('comic.html',data=data1["data"]["results"][0])
     return app

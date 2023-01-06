@@ -2,7 +2,7 @@
   <head>
     <link rel="stylesheet" href="../static/style.css">
   </head>
-  <!--<body> 
+  <body> 
     <div class="card">
         <h2>{{data.title}}</h2>
         <h3>Description</h3>
@@ -25,7 +25,12 @@
           <li>{{character.name}}</li>
           {% endfor %}
         </ul>
-        stories
+        <h3>Contains Stories</h3>
+        <ul>
+          {% for event in data.stories["items"] %}
+          <li>{{event.name}}</li>
+          {% endfor %}
+        </ul>
         <h3>Part of Events</h3>
         <ul>
           {% for event in data.events["items"] %}
@@ -33,6 +38,5 @@
           {% endfor %}
         </ul>
     </div>
-  </body>-->
-  {{data}}
+  </body>
 </html>
