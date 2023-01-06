@@ -43,4 +43,11 @@ def create_app(test_config=None):
         param="/comics"
         data1=request(param)
         return render_template('comics.html',data=data1["data"]["results"])
+    @app.route("/comic/<path:Id>")
+    def comic(Id):
+        #Id=43257
+        param="/comics/"+Id
+        data1=request(param)
+        print(data1)
+        return render_template('comic.html',data=data1["data"]["results"])
     return app
