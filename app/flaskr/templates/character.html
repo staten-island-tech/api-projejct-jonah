@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+  <body> 
+    <div class="card">
+        <h2>{{character.name}}</h2>
+        <img href="{{character.thumbnail}}" alt="{{character.name}}">
+        <h3>Appearances</h3>
+        <h4>Comics</h4>
+        <ul>
+          {% for x in character.comics['items'] %}
+          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          {% endfor %}
+        </ul>
+        <h4>Series</h4>
+        <ul>
+          {% for x in character.series['items'] %}
+          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          {% endfor %}
+        </ul>
+        <h4>Stories</h4>
+        <ul>
+          {% for x in character.stories['items'] %}
+          <li><p>{{x['name']}}</p><p>Story type- {{x["type"]}}.</p><p>{{x["resourceURI"]}}</p></li>
+          {% endfor %}
+        </ul>
+        <h4>Events</h4>
+        <ul>
+          {% for x in character.events['items'] %}
+          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          {% endfor %}
+        </ul>
+        <h4>Links</h4>
+        <ul>
+          {% for x in character.urls %}
+          <li><p>{{x['type']}}</p><p>{{x["url"]}}</p></li>
+          {% endfor %}
+        </ul>
+      </div>
+  </body>
+</html>
