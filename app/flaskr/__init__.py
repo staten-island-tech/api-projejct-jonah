@@ -1,7 +1,7 @@
+
 import os
 
-from flask import Flask, render_template
-from .tempdata import data
+from flask import Flask, render_template, request
 
 def create_app(test_config=None):
     # create and configure the app
@@ -24,30 +24,32 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    from .test import request
+    from .test import request1
     @app.route("/")
     def home():
         return render_template('home.html') 
     @app.route("/characters")
     def characters():
         param="/characters"
-        data1=request(param)
+        data1=request1(param)
         return render_template('characters.html',data=data1["data"]["results"])
     @app.route("/creators")
     def creators():
         param="/creators"
-        data1=request(param)
+        data1=request1(param)
         return render_template('creators.html',data=data1["data"]["results"])
     @app.route("/comics")
     def comics():
         param="/comics"
-        data1=request(param)
+        data1=request1(param)
         return render_template('comics.html',data=data1["data"]["results"])
-    @app.route("/comic/<path:Id>")
-    def comic(Id):
-        #Id=43257
-        param="/comics/"+Id
-        data1=request(param)
-        print(data1)
-        return render_template('comic.html',data=data1["data"]["results"])
+    @app.route("/comic", methods=('GET', 'POST'))
+    def comic():
+        if request.method == "GET":
+            return render_template("ask.html")
+        else:
+            param1=request.form["title"]
+            param="/comics/"+param1
+            data1=request1(param)
+            return render_template('comic.html',data=data1["data"]["results"][0])
     return app

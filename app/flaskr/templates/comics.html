@@ -27,7 +27,12 @@
           <li>{{character.name}}</li>
           {% endfor %}
         </ul>
-        stories
+        <h3>Contains Stories</h3>
+        <ul>
+          {% for event in comic.stories["items"] %}
+          <li>{{event.name}}</li>
+          {% endfor %}
+        </ul>
         <h3>Part of Events</h3>
         <ul>
           {% for event in comic.events["items"] %}
