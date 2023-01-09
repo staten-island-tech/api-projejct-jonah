@@ -4,7 +4,11 @@
     </head>
     <body>
         <form method="POST">
-            <input>
+            <input
+            name="title"
+            id="title"
+            value="{{ request.form['title'] }}"
+            required>
         </form>
     </body>
 </html>

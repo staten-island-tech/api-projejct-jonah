@@ -24,32 +24,32 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    from .test import request
+    from .test import request1
     @app.route("/")
     def home():
         return render_template('home.html') 
     @app.route("/characters")
     def characters():
         param="/characters"
-        data1=request(param)
+        data1=request1(param)
         return render_template('characters.html',data=data1["data"]["results"])
     @app.route("/creators")
     def creators():
         param="/creators"
-        data1=request(param)
+        data1=request1(param)
         return render_template('creators.html',data=data1["data"]["results"])
     @app.route("/comics")
     def comics():
         param="/comics"
-        data1=request(param)
+        data1=request1(param)
         return render_template('comics.html',data=data1["data"]["results"])
     @app.route("/comic", methods=('GET', 'POST'))
     def comic():
         if request.method == "GET":
             return render_template("ask.html")
         else:
-            param1=375
+            param1=request.form["title"]
             param="/comics/"+param1
-            data1=request(param)
+            data1=request1(param)
             return render_template('comic.html',data=data1["data"]["results"][0])
     return app
