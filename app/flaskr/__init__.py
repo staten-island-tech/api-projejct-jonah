@@ -96,6 +96,26 @@ def create_app(test_config=None):
             return render_template("error.html")
         else:
             return render_template('events.html',data=data1["data"]["results"])
+    @app.route("/series", methods=('GET', 'POST'))
+    def event():
+        if request.method == "GET":
+            return render_template("ask.html")
+        else:
+            param1=request.form["title"]
+            param="/events/"+param1
+            data1=request1(param)
+            if data1==0:
+                return render_template("error.html")
+            else:
+                return render_template('event.html',character=data1["data"]["results"][0])
+    @app.route("/serieses")
+    def events():
+        param="/series"
+        data1=request1(param)
+        if data1==0:
+            return render_template("error.html")
+        else:
+            return render_template('events.html',data=data1["data"]["results"])
     @app.route("/event", methods=('GET', 'POST'))
     def event():
         if request.method == "GET":
