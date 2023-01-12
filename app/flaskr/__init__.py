@@ -107,7 +107,7 @@ def create_app(test_config=None):
             if data1==0:
                 return render_template("error.html")
             else:
-                return render_template('series.html',character=data1["data"]["results"][0])
+                return render_template('series.html',comic=data1["data"]["results"][0])
     @app.route("/serieses")
     def serieses():
         param="/series"

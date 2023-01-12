@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+  <body> 
+    <div class="maincard">
+        <h2>{{comic.title}}</h2>
+        <img href="{{comic.thumbnail.path}}">
+        <h3>Description</h3>
+        <p>{{comic.description}} {{comic.type}} {{comic.rating}}</p>
+        <p>Between {{comic.previous.name}} and {{comic.next.name}}</p>
+        <h3>Duration</h3>
+        <p>{{comic.startYear}}-{{comic.endYear}}</p>
+        <h3>Webpage</h3>
+        <a href="{{comic.urls.0.url}}">Webpage</a>
+        <h3>Creators</h3>
+        <ul>
+          {% for creator in comic.creators["items"] %}
+          <li>{{creator.name}}, {{creator.role}}</li>
+          {% endfor %}
+        </ul>
+        <h3>Characters Featured</h3>
+        <ul>
+          {% for character in comic.characters["items"] %}
+          <li>{{character.name}}</li>
+          {% endfor %}
+        </ul>
+        <h3>Contains Stories</h3>
+        <ul>
+          {% for event in comic.stories["items"] %}
+          <li>{{event.name}}, {{event.type}}</li>
+          {% endfor %}
+        </ul>
+        <h3>Comics</h3>
+        <ul>
+          {% for event in comic.comics["items"] %}
+          <li>{{event.name}}</li>
+          {% endfor %}
+        </ul>
+        <h3>Part of Events</h3>
+        <ul>
+          {% for event in comic.events["items"] %}
+          <li>{{event.name}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+  </body>
+</html>
