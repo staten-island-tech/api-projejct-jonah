@@ -9,11 +9,13 @@ html{
     width: 4in;
     height: 5in;
     overflow: hidden;
+    margin: 10px 10px;
 }
 .card:hover {
     border: 10px ridge #cb0b0b;
     width: 4in;
     height: unset;
+    margin: 10px 10px;
 }
 .cards{
     display: flex;
