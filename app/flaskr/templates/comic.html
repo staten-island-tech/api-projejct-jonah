@@ -2,45 +2,41 @@
   <head>
     <link rel="stylesheet" href="../static/style.css">
   </head>
-  <body>
-    <div class="cards">
-      {% for comic in data %}
-      <div class="card">
-        <h2>{{comic.title}}</h2>
+  <body> 
+    <div class="maincard">
+        <h2>{{data.title}}</h2>
         <h3>Description</h3>
-        <p>{{comic.description}}</p>
+        <p>{{data.description}}</p>
         <h3>Webpage</h3>
-        <a href="{{comic.urls.0.url}}">Webpage</a>
+        <p>{{data.urls.0.url}}</p>
         <h3>In Series</h3>
-        <p>{{comic.series.name}}</p>
+        <p>{{data.series.name}}</p>
         <h3>Release Date</h3>
-        <p>{{comic.dates.0.date}}</p>
+        <p>{{data.dates.0.date}}</p>
         <h3>Creators</h3>
         <ul>
-          {% for creator in comic.creators["items"] %}
+          {% for creator in data.creators["items"] %}
           <li>{{creator.name}}, {{creator.role}}</li>
           {% endfor %}
         </ul>
         <h3>Characters Featured</h3>
         <ul>
-          {% for character in comic.characters["items"] %}
+          {% for character in data.characters["items"] %}
           <li>{{character.name}}</li>
           {% endfor %}
         </ul>
         <h3>Contains Stories</h3>
         <ul>
-          {% for event in comic.stories["items"] %}
+          {% for event in data.stories["items"] %}
           <li>{{event.name}}</li>
           {% endfor %}
         </ul>
         <h3>Part of Events</h3>
         <ul>
-          {% for event in comic.events["items"] %}
+          {% for event in data.events["items"] %}
           <li>{{event.name}}</li>
           {% endfor %}
         </ul>
-      </div>
-      {% endfor %}
     </div>
   </body>
 </html>

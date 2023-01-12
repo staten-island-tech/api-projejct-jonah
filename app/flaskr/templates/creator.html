@@ -2,10 +2,8 @@
   <head>
     <link rel="stylesheet" href="../static/style.css">
   </head>
-  <body>
-    <div class="cards">
-      {% for character in data %}
-      <div class="card">
+  <body> 
+    <div class="maincard">
         <h2>{{character.fullName}}</h2>
         <img href="{{character.thumbnail.path}}" alt="{{character.fullName}}">
         <h3>Contributions</h3>
@@ -40,7 +38,5 @@
           {% endfor %}
         </ul>
       </div>
-      {% endfor %}
-    </div>
   </body>
 </html>
