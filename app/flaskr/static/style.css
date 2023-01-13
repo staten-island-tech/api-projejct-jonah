@@ -26,6 +26,10 @@ html{
     color: #f8b72f;
     text-decoration: none;
 }
+a{
+    color: #f8b72f;
+    text-decoration: none;
+}
 .broken{
     color: red;
     text-decoration: line-through;

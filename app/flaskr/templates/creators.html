@@ -12,28 +12,28 @@
         <h4>Comics</h4>
         <ul>
           {% for x in character.comics['items'] %}
-          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          <li><p>{{x['name']}}</p></li>
           {% endfor %}
         </ul>
         <h4>Series</h4>
         <ul>
           {% for x in character.series['items'] %}
-          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          <li><p>{{x['name']}}</p></li>
           {% endfor %}
         </ul>
         <h4>Stories</h4>
         <ul>
           {% for x in character.stories['items'] %}
-          <li><p>{{x['name']}}</p><p>Story type- {{x["type"]}}.</p><p>{{x["resourceURI"]}}</p></li>
+          <li><p>{{x['name']}}</p><p>Story type- {{x["type"]}}.</p></li>
           {% endfor %}
         </ul>
         <h4>Events</h4>
         <ul>
           {% for x in character.events['items'] %}
-          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          <li><p>{{x['name']}}</p></li>
           {% endfor %}
         </ul>
-        <h4>Links</h4>
+        <h3>Links</h3>
         <ul>
           {% for x in character.urls %}
           <li><p>{{x['type']}}</p><a href={{x.url}}>Link</a></li>

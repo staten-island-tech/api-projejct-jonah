@@ -26,25 +26,25 @@
         <h4>Characters</h4>
         <ul>
           {% for x in character.characters['items'] %}
-          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          <li><p>{{x['name']}}</p></li>
           {% endfor %}
         </ul>
         <h4>Stories</h4>
         <ul>
           {% for x in character.stories['items'] %}
-          <li><p>{{x['name']}}</p><p>Story type- {{x["type"]}}.</p><p>{{x["resourceURI"]}}</p></li>
+          <li><p>{{x['name']}}</p><p>Story type- {{x["type"]}}.</p></li>
           {% endfor %}
         </ul>
         <h4>Comics</h4>
         <ul>
           {% for x in character.comics['items'] %}
-          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          <li><p>{{x['name']}}</p></li>
           {% endfor %}
         </ul>
         <h4>Series</h4>
         <ul>
           {% for x in character.series['items'] %}
-          <li><p>{{x['name']}}</p><p>{{x["resourceURI"]}}</p></li>
+          <li><p>{{x['name']}}</p></li>
           {% endfor %}
         </ul>
       </div>
