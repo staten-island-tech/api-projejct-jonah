@@ -36,7 +36,7 @@
         <h4>Links</h4>
         <ul>
           {% for x in character.urls %}
-          <li><p>{{x['type']}}</p><p>{{x["url"]}}</p></li>
+          <li><p>{{x['type']}}</p><a href={{x.url}}>Link</a></li>
           {% endfor %}
         </ul>
       </div>

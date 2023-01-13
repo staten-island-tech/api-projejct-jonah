@@ -55,7 +55,8 @@ def create_app(test_config=None):
     @app.route("/comic", methods=('GET', 'POST'))
     def comic():
         if request.method == "GET":
-            return render_template("ask.html")
+            type1="Comic"
+            return render_template("ask.html",type1=type1)
         else:
             param1=request.form["title"]
             param="/comics/"+param1
@@ -67,7 +68,8 @@ def create_app(test_config=None):
     @app.route("/character", methods=('GET', 'POST'))
     def character():
         if request.method == "GET":
-            return render_template("ask.html")
+            type1="Character"
+            return render_template("ask.html",type1=type1)
         else:
             param1=request.form["title"]
             param="/characters/"+param1
@@ -79,7 +81,8 @@ def create_app(test_config=None):
     @app.route("/creator", methods=('GET', 'POST'))
     def creator():
         if request.method == "GET":
-            return render_template("ask.html")
+            type1="Creator"
+            return render_template("ask.html",type1=type1)
         else:
             param1=request.form["title"]
             param="/creators/"+param1
@@ -99,7 +102,8 @@ def create_app(test_config=None):
     @app.route("/series", methods=('GET', 'POST'))
     def series():
         if request.method == "GET":
-            return render_template("ask.html")
+            type1="Series"
+            return render_template("ask.html",type1=type1)
         else:
             param1=request.form["title"]
             param="/series/"+param1
@@ -119,7 +123,8 @@ def create_app(test_config=None):
     @app.route("/event", methods=('GET', 'POST'))
     def event():
         if request.method == "GET":
-            return render_template("ask.html")
+            type1="Event"
+            return render_template("ask.html",type1=type1)
         else:
             param1=request.form["title"]
             param="/events/"+param1
