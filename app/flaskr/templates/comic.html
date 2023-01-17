@@ -15,29 +15,29 @@
         <h3>Release Date</h3>
         <p>{{data.dates.0.date}}</p>
         <h3>Creators</h3>
-        <ul>
+        
           {% for creator in data.creators["items"] %}
           <li>{{creator.name}}, {{creator.role}}</li>
           {% endfor %}
-        </ul>
+        
         <h3>Characters Featured</h3>
-        <ul>
+        
           {% for character in data.characters["items"] %}
           <li>{{character.name}}</li>
           {% endfor %}
-        </ul>
+        
         <h3>Contains Stories</h3>
-        <ul>
+        
           {% for event in data.stories["items"] %}
           <li>{{event.name}}</li>
           {% endfor %}
-        </ul>
+        
         <h3>Part of Events</h3>
-        <ul>
+        
           {% for event in data.events["items"] %}
           <li>{{event.name}}</li>
           {% endfor %}
-        </ul>
+        
     </div>
   </body>
 </html>

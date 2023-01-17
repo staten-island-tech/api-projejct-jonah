@@ -9,43 +9,43 @@
         <img href="{{character.thumbnail.path}}" alt="{{character.title}}">
         <p>{{character.description}}</p>
         <h4>links</h4>
-        <ul>
+        
             {% for x in character.urls %}
-            <li><p>{{x['type']}}</p><a href={{x.url}}>Link</a></li>
+            <li>{{x['type']}}: <a href={{x.url}}>Link</a></li>
             {% endfor %}
-        </ul>
+        
         <h4>Duration</h4>
         <p>{{character.start}}-{{character.end}}</p>
         <h4>Creators</h4>
-        <ul>
+        
           {% for x in character.creators['items'] %}
-          <li><p>{{x['name']}}</p><p>{{x["role"]}}</p></li>
+          <li>{{x['name']}}, {{x["role"]}}</li>
           {% endfor %}
-        </ul>
+        
         <h4>Characters</h4>
-        <ul>
+        
           {% for x in character.characters['items'] %}
-          <li><p>{{x['name']}}</p></li>
+          <li>{{x['name']}}</li>
           {% endfor %}
-        </ul>
+        
         <h4>Stories</h4>
-        <ul>
+        
           {% for x in character.stories['items'] %}
-          <li><p>{{x['name']}}</p><p>Story type- {{x["type"]}}.</p></li>
+          <li>{{x['name']}}</p><p>Story type- {{x["type"]}}.</li>
           {% endfor %}
-        </ul>
+        
         <h4>Comics</h4>
-        <ul>
+        
           {% for x in character.comics['items'] %}
-          <li><p>{{x['name']}}</p></li>
+          <li>{{x['name']}}</li>
           {% endfor %}
-        </ul>
+        
         <h4>Series</h4>
-        <ul>
+        
           {% for x in character.series['items'] %}
-          <li><p>{{x['name']}}</p></li>
+          <li>{{x['name']}}</li>
           {% endfor %}
-        </ul>
+        
       </div>
   </body>
 </html>
