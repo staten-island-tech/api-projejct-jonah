@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="../static/style.css">
     </head>
     <body>
-        <h1>Search for a {{type1}}</h1>
+        <h1>Search for a {{type1}} (By Official Id)</h1>
         <form method="POST">
             <input
             name="title"
@@ -11,5 +11,8 @@
             value="{{ request.form['title'] }}"
             required>
         </form>
+        <h4>Popular Searches:</h4>
+        {% for x in data2 %}
+        {% endfor %}
     </body>
 </html>
