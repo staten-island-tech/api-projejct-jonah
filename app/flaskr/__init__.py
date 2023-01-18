@@ -57,7 +57,7 @@ def create_app(test_config=None):
     def comic():
         if request.method == "GET":
             type1="Comic"
-            return render_template("ask.html", data2.,type1=type1)
+            return render_template("ask.html", data2=data2["comics"],type1=type1)
         else:
             param1=request.form["title"]
             param="/comics/"+param1
@@ -70,7 +70,7 @@ def create_app(test_config=None):
     def character():
         if request.method == "GET":
             type1="Character"
-            return render_template("ask.html", data2.,type1=type1)
+            return render_template("ask.html", data2=data2["characters"],type1=type1)
         else:
             param1=request.form["title"]
             param="/characters/"+param1
@@ -83,7 +83,7 @@ def create_app(test_config=None):
     def creator():
         if request.method == "GET":
             type1="Creator"
-            return render_template("ask.html", data2.,type1=type1)
+            return render_template("ask.html", data2=data2["creators"],type1=type1)
         else:
             param1=request.form["title"]
             param="/creators/"+param1
@@ -104,7 +104,7 @@ def create_app(test_config=None):
     def series():
         if request.method == "GET":
             type1="Series"
-            return render_template("ask.html", data2.,type1=type1)
+            return render_template("ask.html", data2=data2["series"],type1=type1)
         else:
             param1=request.form["title"]
             param="/series/"+param1
@@ -125,7 +125,7 @@ def create_app(test_config=None):
     def event():
         if request.method == "GET":
             type1="Event"
-            return render_template("ask.html", data2.,type1=type1)
+            return render_template("ask.html", data2=data2["events"],type1=type1)
         else:
             param1=request.form["title"]
             param="/events/"+param1
