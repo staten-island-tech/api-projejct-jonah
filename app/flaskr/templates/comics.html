@@ -8,6 +8,7 @@
       {% for comic in data %}
       <div class="card">
         <h2>{{comic.title}}</h2>
+        <img src="{{comic.thumbnail.path}}.jpg" alt="{{comic.title}}">
         <h3>Description</h3>
         <p>{{comic.description}}</p>
         <h3>Webpage</h3>

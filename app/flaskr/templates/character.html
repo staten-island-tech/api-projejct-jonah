@@ -6,7 +6,7 @@
     <h1>Character</h1>
     <div class="maincard">
         <h2>{{character.name}}</h2>
-        <img href="{{character.thumbnail}}" alt="{{character.name}}">
+        <img src="{{character.thumbnail.path}}.jpg" alt="{{character.name}}">
         <h3>Appearances</h3>
         <h4>Comics</h4>
           {% for x in character.comics['items'] %}

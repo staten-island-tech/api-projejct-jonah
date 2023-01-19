@@ -8,7 +8,7 @@
       {% for comic in data %}
       <div class="card">
         <h2>{{comic.title}}</h2>
-        <img href="{{comic.thumbnail.path}}">
+        <img src="{{comic.thumbnail.path}}.jpg">
         <h3>Description</h3>
         <p>{{comic.description}} {{comic.type}} {{comic.rating}}</p>
         <p>Between {{comic.previous.name}} and {{comic.next.name}}</p>
