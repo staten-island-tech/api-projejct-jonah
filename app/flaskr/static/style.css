@@ -1,5 +1,5 @@
 html{
-    background-color: #f8f6f4;
+    background-color: #f5e9db;
     color: #f11819;
     border: 10px ridge #5c1225;
     text-align: center;
@@ -10,6 +10,7 @@ html{
     height: 5in;
     overflow: hidden;
     margin: 10px 10px;
+    background-color: #f8f6f4;
 }
 .card:hover {
     border: 10px ridge #5c1225;
