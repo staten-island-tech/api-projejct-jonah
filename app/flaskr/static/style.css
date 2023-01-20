@@ -3,6 +3,7 @@ html{
     color: #f11819;
     border: 10px ridge #5c1225;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .card{
     border: 10px ridge #5c1225;
